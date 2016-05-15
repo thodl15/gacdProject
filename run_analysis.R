@@ -86,5 +86,5 @@ meansTable = rbindlist(lapply(transpose(sbjActList), getSbjActMean, fullTable))
 names(meansTable) = names(fullTable)
 
 #Write the new data frame to file
-write.csv(meansTable, file = "subjectMeans.csv")
+write.table(meansTable, file="means.txt",row.name=FALSE)
 
